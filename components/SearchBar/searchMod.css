@@ -1,0 +1,7 @@
+.coin-search {
+    margin-bottom: 64px;
+    display: flex;
+    border: 1px solid green;
+    background: yellow;
+    align-items: center;
+}
