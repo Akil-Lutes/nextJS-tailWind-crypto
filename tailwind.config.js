@@ -1,11 +1,16 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  purge: [
+    './components/**/*.js',
+    './pages/**/*.js'],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    minHeight: {
+      '60vh': '60vh'
+    }
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+  variants: {},
+  plugins: [
+    require( 'tailwindcss' ),
+    require( 'autoprefixer' )
+  ]
 }

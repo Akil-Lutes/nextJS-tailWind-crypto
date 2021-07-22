@@ -1,10 +1,12 @@
-import React from 'react'
-import styles from './search.module.css'
+import Link from 'next/link';
+import 'tailwindcss/tailwind.css'
 
 const SearchBar = () => {
     return (
-        <div className={styles.coin_search}>
-            <input className={styles.coin_input} />
+        <div className="p-8">
+            <div className="bg-white flex items-center rounded-full shadow-xl">
+                <input className="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none" id="search" type="text" placeholder="Search" />
+            </div>
         </div>
     )
 }

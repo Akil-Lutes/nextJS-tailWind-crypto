@@ -1,5 +1,15 @@
-import styles from './layout.module.css'
+import Header from './Header';
+import SearchBar from './SearchBar'
 
-export default function Layout({ children }) {
-  return <div className={styles.container}>{children}</div>
+
+function Layout({children}) {
+  return(
+    <div>
+      <Header />
+      {children}
+      <SearchBar />
+    </div>
+  )
 }
+
+export default Layout
