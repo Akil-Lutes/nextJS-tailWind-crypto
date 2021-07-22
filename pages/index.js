@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <h1>Crypto Tracker</h1>
-      <SearchBar />
+      <SearchBar type="text" placeholder="Search" />
     </div>
   )
 }
