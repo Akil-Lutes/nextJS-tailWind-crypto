@@ -1,14 +1,18 @@
 import Head from 'next/head'
 import SearchBar from '../components/SearchBar'
 import Layout from '../components/layout'
+import CryptoList from '../components/CrytpoList'
+import Header from '../components/Header'
 
-export default function Home() {
+export default function Home({organizedCoins}) {
+  console.log(organizedCoins)
   return (
-    <Layout>
       <Head>
         <title>Crypto Tracker</title>
+        <Header />
+        <SearchBar />
+        <CryptoList organizedCoins={organizedCoins} />
       </Head>
-    </Layout>
   )
 }
 
