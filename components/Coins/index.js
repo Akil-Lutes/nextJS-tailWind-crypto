@@ -33,6 +33,10 @@ const Coins = ({
                   {priceChange.toFixed(2)}%
                 </p>
               )}
+                        <p className="marketcapRank">{marketcaprank}</p>
+                        <p className="marketCap">{marketcap}</p>
+                        <p className="coin-circSupply">{circulatingsupply}</p>
+                        <p className="coin-totalSupply">{totalsupply}</p>
                     </div>
                 </div>
             </div>
