@@ -3,7 +3,7 @@ import SearchBar from './SearchBar'
 import Coins from './CrytpoList'
 
 
-function Layout({children, organizedCoins}) {
+function Layout({children, title="Crypto List"}) {
   return(
     <div>
       <Header />
