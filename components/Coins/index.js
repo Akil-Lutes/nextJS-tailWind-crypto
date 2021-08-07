@@ -22,8 +22,8 @@ const Coins = ({
                     <h1 className="coin_name text-base w-40">{name}</h1>
                     <p className="coin_symbol uppercase">{symbol}</p>
                     <div className="coin_data flex text-right justify-between w-full">
-                        <p className="coin_price w-32">${price}</p>
-                        <p className="coin_ath w-32">${alltimehigh}</p>
+                        <p className="coin_price w-32">Price <br></br> ${price}</p>
+                        <p className="coin_ath w-32">All Time High ${alltimehigh}</p>
                         {priceChange < 0 ? (
                 <p className="coin_percent text-red-600 w-24">
                   {priceChange.toFixed(2)}%
@@ -34,7 +34,7 @@ const Coins = ({
                 </p>
               )}
                         <p className="marketcapRank w-32">Mktcap Rank: {marketcaprank}</p>
-                        <p className="marketCap">Mktcap: {marketcap.toLocaleString()}</p>
+                        <p className="marketCap">Mktcap: ${marketcap.toLocaleString()}</p>
                         {/* <p className="coin-circSupply">Circulating Supply: {circulatingsupply}</p> */}
                         {/* <p className="coin-totalSupply">Total Supply: {totalsupply}</p> */}
                     </div>
