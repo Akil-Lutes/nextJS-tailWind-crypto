@@ -1,23 +1,21 @@
 import Link from 'next/link';
-import 'tailwindcss/tailwind.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBitcoin, faEthereum} from '@fortawesome/free-brands-svg-icons'
+import 'tailwindcss/tailwind.css'
 
-// config.autoAddCss = false
 
 
 function Header() {
 
     return(
-        <header className="text-gray-600 body-font">
-            <FontAwesomeIcon icon={faBitcoin} className="flex justify-center mx-auto" style={{width: '100px'}} />
+        <header className="text-gray-600 border border-red-800 body-font">
+            <FontAwesomeIcon icon={faBitcoin} className="flex justify-center mx-auto w-8 text-9xl bitcoin" size="lg" />
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
             <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <FontAwesomeIcon icon={faEthereum} style={{width: '40px'}} />
+            <FontAwesomeIcon icon={faEthereum} className="ethereum text-5xl w-8" />
             <span className="ml-3 text-xl">CryptoList</span>
             </a>
             <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <FontAwesomeIcon icon={['fab', 'bitcoin']} />
             <a className="mr-5 hover:text-gray-900">Exchanges</a>
             <a className="mr-5 hover:text-gray-900">Coins</a>
             </nav>

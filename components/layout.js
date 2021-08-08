@@ -1,14 +1,11 @@
 import Header from './Header';
-import SearchBar from './SearchBar'
-import Coins from './CrytpoList'
+import 'tailwindcss/tailwind.css'
 
 
 function Layout({children, title="Crypto List"}) {
   return(
     <div>
-      <Head>
         <title>{title}</title>
-      </Head>
       <Header />
       {children}
     </div>
