@@ -1,14 +1,14 @@
-import Header from './Header';
 import 'tailwindcss/tailwind.css'
+import Header from './Header/index';
 
 
-function Layout({children, title="Crypto List"}) {
-  return(
-    <div>
-        <title>{title}</title>
+function Layout({children}) {
+  return (
+    <>
       <Header />
-      {children}
-    </div>
+      <main>{children}</main>
+      {/* <Footer /> */}
+    </>
   )
 }
 

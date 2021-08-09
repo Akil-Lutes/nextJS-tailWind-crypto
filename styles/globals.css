@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    --purple: #f5ebff;
+    --primary: #665ffa;
+    --text: #000;
+    --yellow: #f7df1e;
+    --blue: #2965f1;
+    --darkgray: #222831;
+    --beige: #eee;
+    --secondary: #f5ebff;
+    --lightpurple: #f0efff;
+  }
+  
+  html.dark {
+    --primary: #b55400;
+    --text: var(--beige);
+    --secondary: var(--darkgray);
+  }

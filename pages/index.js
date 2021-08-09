@@ -1,7 +1,8 @@
+import Head from 'next/head'
 import { useState } from 'react'
 import SearchBar from '../components/SearchBar'
-import Layout from '../components/layout'
 import CryptoList from '../components/CrytpoList'
+import Layout from '../components/layout'
 import 'tailwindcss/tailwind.css'
 
 export default function Home({organizedCoins}) {
@@ -19,11 +20,16 @@ export default function Home({organizedCoins}) {
   };
 
   return (
-      <Layout>
-        <title>Crypto Tracker</title>
-          <SearchBar type='text' placeholder='search' onChange={handleChange} />
-          <CryptoList organizedCoins={altCoins} />
-      </Layout>
+    <>
+    <Head>
+        <title>CryptoList</title>
+      </Head>
+      <section className="bg-gray-200 dark:bg-lightgrey">
+          <title>Crypto Tracker</title>
+            <SearchBar type='text' placeholder='search' onChange={handleChange} />
+            <CryptoList organizedCoins={altCoins} />
+      </section>
+    </>
       
   )
 }
