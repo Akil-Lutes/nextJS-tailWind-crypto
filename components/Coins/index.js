@@ -15,8 +15,8 @@ const Coins = ({
 
 }) => {
     return(
-        <div className="coin-container flex justify-center w-full md:w-auto">
-            <div className="coin-row flex flex-row justify-start items-center h-20 w-1/3 md:w-5/6 px-8 border-b-2 border-fuchsia-600 hover:bg-green-300">
+        <div className="coin-container flex justify-center content-evenly w-full md:w-auto">
+            <div className="coin-row flex flex-row justify-start items-center h-20 w-1/3 md:w-5/6 px-8 border-b-2 border-gray-600 hover:bg-green-300">
                 <div className="coin flex items-center pr-8 w-full">
                     <img src={image} alt={name} className="coin_image h-8 w-8 mr-2.5"/>
                     <h1 className="coin_name text-base w-40">{name}</h1>
