@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { useState } from 'react'
 import SearchBar from '../components/SearchBar'
 import CryptoList from '../components/CrytpoList'
-import Layout from '../components/layout'
 import 'tailwindcss/tailwind.css'
 
 export default function Home({organizedCoins}) {

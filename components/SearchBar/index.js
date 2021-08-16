@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import 'tailwindcss/tailwind.css'
 
 const SearchBar = ({ ...rest }) => {

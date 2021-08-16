@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 // My Coins component of what I want to render to the screen
 
@@ -16,8 +16,8 @@ const Coins = ({
 
 
 }) => {
-    return(
-      <Link href='/coin/[id]' as={`/coin/{id}`}>
+    return (
+      <Link href='/coin/[id]' >
         <a>
           <div className="coin-container flex justify-center content-evenly w-full md:w-auto">
               <div className="coin-row flex flex-row justify-start items-center h-20 w-1/3 md:w-5/6 px-8 border-b-2 border-gray-600 hover:bg-green-300">
@@ -39,8 +39,7 @@ const Coins = ({
                 )}
                             <p className="marketcapRank w-32">Mktcap Rank: {marketcaprank}</p>
                             <p className="marketCap">Mktcap: ${marketcap.toLocaleString()}</p>
-                            {/* <p className="coin-circSupply">Circulating Supply: {circulatingsupply}</p> */}
-                            {/* <p className="coin-totalSupply">Total Supply: {totalsupply}</p> */}
+                            
                         </div>
                     </div>
                 </div>
@@ -53,3 +52,6 @@ const Coins = ({
 // Going to create a hover effect that shows more coin data
 
 export default Coins
+
+
+// as={`/coin/${id}`}
