@@ -8,7 +8,8 @@ export default function Home({organizedCoins}) {
   const [search, setSearch] = useState('')
 
   const altCoins = organizedCoins.filter(coin =>
-    coin.name.toLowerCase().includes(search.toLowerCase())
+    coin.name.toLowerCase().includes(search.toLowerCase()) ||
+        coin.symbol.toLowerCase().includes(search.toLowerCase())
   );
 
   const handleChange = e => {
@@ -20,9 +21,6 @@ export default function Home({organizedCoins}) {
 
   return (
     <>
-    <Head>
-        <title>CryptoList</title>
-      </Head>
       <section className="bg-gray-200 dark:bg-lightgrey">
           <title>Crypto Tracker</title>
             <SearchBar type='text' placeholder='search' onChange={handleChange} />
