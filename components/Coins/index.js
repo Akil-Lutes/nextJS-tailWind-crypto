@@ -29,11 +29,11 @@ const Coins = ({
                         <p className="coin_ath w-32">All Time High ${alltimehigh}</p>
                         {priceChange < 0 ? (
                 <p className="coin_percent text-red-600 w-24">
-                  {priceChange.toFixed(2)}%
+                  Price Change 24hr {priceChange.toFixed(2)}%
                 </p>
               ) : (
                 <p className="coin_percent text-green-400 w-24">
-                  {priceChange.toFixed(2)}%
+                  Price Change 24hr {priceChange.toFixed(2)}%
                 </p>
               )}
                           <p className="marketcapRank w-32">Mktcap Rank: {marketcaprank}</p>

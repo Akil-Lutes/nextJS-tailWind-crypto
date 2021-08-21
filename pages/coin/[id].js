@@ -4,21 +4,29 @@ import 'tailwindcss/tailwind.css'
 
 const Coin = ({ coin }) => {
   return (
-    <Layout>
-      <div className>
-        <div className>
+      <div className="coin_page border border-green-400 flex justify-center items-center h-96">
+        <div className="coin_container border border-green-400 rounded-lg flex flex-col justify-center items-center w-1/6">
           <img
-            src={coin.image.small}
+            src={coin.image.large}
             alt={coin.name}
           />
-          <h1 className>{coin.name}</h1>
-          <p className>{coin.symbol}</p>
-          <p className>
-            {coin.market_data.current_price.usd}
+          <h1 className="coin_name mb-4">{coin.name}</h1>
+          <p className="coin_symbol mb-4">{coin.symbol.toUpperCase()}</p>
+          <p className="mb-4">
+            ${coin.market_data.current_price.usd}
           </p>
+          {coin.market_data.price_change_percentage_7d < 0 ? (
+                <p className="coin_percent text-red-600 w-24">
+                  7day {coin.market_data.price_change_percentage_7d.toFixed(2)}%
+                </p>
+              ) : (
+                <p className="coin_percent text-green-400 w-24">
+                  7day {coin.market_data.price_change_percentage_7d.toFixed(2)}%
+                </p>
+              )}
+          {/* <p>7d% {coin.market_data.price_change_percentage_7d}</p> */}
         </div>
       </div>
-    </Layout>
 
   );
 };
