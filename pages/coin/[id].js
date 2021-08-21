@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css'
 
 const Coin = ({ coin }) => {
   return (
-      <div className="coin_page border border-green-400 flex justify-center items-center h-96">
+      <div className="coin_page flex justify-center items-center h-96">
         <div className="coin_container border border-green-400 rounded-lg flex flex-col justify-center items-center w-1/6">
           <img
             src={coin.image.large}
@@ -16,15 +16,14 @@ const Coin = ({ coin }) => {
             ${coin.market_data.current_price.usd}
           </p>
           {coin.market_data.price_change_percentage_7d < 0 ? (
-                <p className="coin_percent text-red-600 w-24">
+                <p className="coin_percent text-red-600 text-center w-24">
                   7day {coin.market_data.price_change_percentage_7d.toFixed(2)}%
                 </p>
               ) : (
-                <p className="coin_percent text-green-400 w-24">
+                <p className="coin_percent text-green-400 text-center w-24">
                   7day {coin.market_data.price_change_percentage_7d.toFixed(2)}%
                 </p>
               )}
-          {/* <p>7d% {coin.market_data.price_change_percentage_7d}</p> */}
         </div>
       </div>
 

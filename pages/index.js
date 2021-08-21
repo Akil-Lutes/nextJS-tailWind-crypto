@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { useState } from 'react'
 import SearchBar from '../components/SearchBar'
 import CryptoList from '../components/CrytpoList'
